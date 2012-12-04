@@ -13,4 +13,7 @@
 - (void) showCalloutWithTitle:(NSString *)title;
 - (void) showCallout;
 
+- (void) setCalloutTitle:(NSString *)title;
+- (NSString *)calloutTitle;
+
 @end
