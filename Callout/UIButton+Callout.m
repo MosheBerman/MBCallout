@@ -14,8 +14,6 @@
 
 @implementation UIButton (Callout)
 
-
-
 - (void) showCalloutWithText:(NSString *)text{
     
     COCalloutView *callout = [[COCalloutView alloc] initWithParentView:self];
@@ -34,7 +32,7 @@ static char *kCalloutKey = "callout";
 }
 
 - (COCalloutView *) callout{
-    objc_getAssociatedObject(self, kCalloutKey);
+   return objc_getAssociatedObject(self, kCalloutKey);
 }
 
 @end
