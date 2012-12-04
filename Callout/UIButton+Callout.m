@@ -8,7 +8,7 @@
 
 #import "UIButton+Callout.h"
 
-#import "COCalloutView.h"
+#import "MBCalloutView.h"
 
 #import <objc/runtime.h>
 
@@ -18,7 +18,7 @@
 
     
     if (![self callout]) {
-        COCalloutView *callout = [[COCalloutView alloc] initWithParentView:self];
+        MBCalloutView *callout = [[MBCalloutView alloc] initWithParentView:self];
         [self setCallout:callout];
     }
     
@@ -29,11 +29,11 @@
 
 static char *kCalloutKey = "callout";
 
-- (void) setCallout:(COCalloutView *)callout{
+- (void) setCallout:(MBCalloutView *)callout{
     objc_setAssociatedObject(self, kCalloutKey, callout, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (COCalloutView *) callout{
+- (MBCalloutView *) callout{
    return objc_getAssociatedObject(self, kCalloutKey);
 }
 

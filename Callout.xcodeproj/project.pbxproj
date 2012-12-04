@@ -12,17 +12,19 @@
 		46079DF7166E65D700FEBA87 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46079DF6166E65D700FEBA87 /* CoreGraphics.framework */; };
 		46079DFD166E65D700FEBA87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46079DFB166E65D700FEBA87 /* InfoPlist.strings */; };
 		46079DFF166E65D700FEBA87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079DFE166E65D700FEBA87 /* main.m */; };
-		46079E03166E65D700FEBA87 /* COAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E02166E65D700FEBA87 /* COAppDelegate.m */; };
+		46079E03166E65D700FEBA87 /* MBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E02166E65D700FEBA87 /* MBAppDelegate.m */; };
 		46079E05166E65D700FEBA87 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 46079E04166E65D700FEBA87 /* Default.png */; };
 		46079E07166E65D700FEBA87 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46079E06166E65D700FEBA87 /* Default@2x.png */; };
 		46079E09166E65D700FEBA87 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 46079E08166E65D700FEBA87 /* Default-568h@2x.png */; };
-		46079E0C166E65D700FEBA87 /* COViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E0B166E65D700FEBA87 /* COViewController.m */; };
-		46079E0F166E65D700FEBA87 /* COViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46079E0D166E65D700FEBA87 /* COViewController.xib */; };
+		46079E0C166E65D700FEBA87 /* MBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E0B166E65D700FEBA87 /* MBViewController.m */; };
+		46079E0F166E65D700FEBA87 /* MBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 46079E0D166E65D700FEBA87 /* MBViewController.xib */; };
 		46079E17166E65D700FEBA87 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46079E16166E65D700FEBA87 /* SenTestingKit.framework */; };
 		46079E18166E65D700FEBA87 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46079DF2166E65D700FEBA87 /* UIKit.framework */; };
 		46079E19166E65D700FEBA87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46079DF4166E65D700FEBA87 /* Foundation.framework */; };
 		46079E21166E65D700FEBA87 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 46079E1F166E65D700FEBA87 /* InfoPlist.strings */; };
 		46079E24166E65D700FEBA87 /* CalloutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E23166E65D700FEBA87 /* CalloutTests.m */; };
+		46079E2F166E660F00FEBA87 /* MBCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E2E166E660F00FEBA87 /* MBCalloutView.m */; };
+		46079E32166E67F200FEBA87 /* UIButton+Callout.m in Sources */ = {isa = PBXBuildFile; fileRef = 46079E31166E67F200FEBA87 /* UIButton+Callout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,20 +46,24 @@
 		46079DFC166E65D700FEBA87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46079DFE166E65D700FEBA87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		46079E00166E65D700FEBA87 /* Callout-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Callout-Prefix.pch"; sourceTree = "<group>"; };
-		46079E01166E65D700FEBA87 /* COAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COAppDelegate.h; sourceTree = "<group>"; };
-		46079E02166E65D700FEBA87 /* COAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COAppDelegate.m; sourceTree = "<group>"; };
+		46079E01166E65D700FEBA87 /* MBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBAppDelegate.h; sourceTree = "<group>"; };
+		46079E02166E65D700FEBA87 /* MBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBAppDelegate.m; sourceTree = "<group>"; };
 		46079E04166E65D700FEBA87 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		46079E06166E65D700FEBA87 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		46079E08166E65D700FEBA87 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		46079E0A166E65D700FEBA87 /* COViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COViewController.h; sourceTree = "<group>"; };
-		46079E0B166E65D700FEBA87 /* COViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COViewController.m; sourceTree = "<group>"; };
-		46079E0E166E65D700FEBA87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/COViewController.xib; sourceTree = "<group>"; };
+		46079E0A166E65D700FEBA87 /* MBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBViewController.h; sourceTree = "<group>"; };
+		46079E0B166E65D700FEBA87 /* MBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBViewController.m; sourceTree = "<group>"; };
+		46079E0E166E65D700FEBA87 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MBViewController.xib; sourceTree = "<group>"; };
 		46079E15166E65D700FEBA87 /* CalloutTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalloutTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46079E16166E65D700FEBA87 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		46079E1E166E65D700FEBA87 /* CalloutTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalloutTests-Info.plist"; sourceTree = "<group>"; };
 		46079E20166E65D700FEBA87 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		46079E22166E65D700FEBA87 /* CalloutTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalloutTests.h; sourceTree = "<group>"; };
 		46079E23166E65D700FEBA87 /* CalloutTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalloutTests.m; sourceTree = "<group>"; };
+		46079E2D166E660F00FEBA87 /* MBCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBCalloutView.h; sourceTree = "<group>"; };
+		46079E2E166E660F00FEBA87 /* MBCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBCalloutView.m; sourceTree = "<group>"; };
+		46079E30166E67F200FEBA87 /* UIButton+Callout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Callout.h"; sourceTree = "<group>"; };
+		46079E31166E67F200FEBA87 /* UIButton+Callout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Callout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,11 +123,15 @@
 		46079DF8166E65D700FEBA87 /* Callout */ = {
 			isa = PBXGroup;
 			children = (
-				46079E01166E65D700FEBA87 /* COAppDelegate.h */,
-				46079E02166E65D700FEBA87 /* COAppDelegate.m */,
-				46079E0A166E65D700FEBA87 /* COViewController.h */,
-				46079E0B166E65D700FEBA87 /* COViewController.m */,
-				46079E0D166E65D700FEBA87 /* COViewController.xib */,
+				46079E01166E65D700FEBA87 /* MBAppDelegate.h */,
+				46079E02166E65D700FEBA87 /* MBAppDelegate.m */,
+				46079E0A166E65D700FEBA87 /* MBViewController.h */,
+				46079E0B166E65D700FEBA87 /* MBViewController.m */,
+				46079E2D166E660F00FEBA87 /* MBCalloutView.h */,
+				46079E2E166E660F00FEBA87 /* MBCalloutView.m */,
+				46079E30166E67F200FEBA87 /* UIButton+Callout.h */,
+				46079E31166E67F200FEBA87 /* UIButton+Callout.m */,
+				46079E0D166E65D700FEBA87 /* MBViewController.xib */,
 				46079DF9166E65D700FEBA87 /* Supporting Files */,
 			);
 			path = Callout;
@@ -205,7 +215,7 @@
 		46079DE5166E65D700FEBA87 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = CO;
+				CLASSPREFIX = MB;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Moshe Berman";
 			};
@@ -236,7 +246,7 @@
 				46079E05166E65D700FEBA87 /* Default.png in Resources */,
 				46079E07166E65D700FEBA87 /* Default@2x.png in Resources */,
 				46079E09166E65D700FEBA87 /* Default-568h@2x.png in Resources */,
-				46079E0F166E65D700FEBA87 /* COViewController.xib in Resources */,
+				46079E0F166E65D700FEBA87 /* MBViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +282,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				46079DFF166E65D700FEBA87 /* main.m in Sources */,
-				46079E03166E65D700FEBA87 /* COAppDelegate.m in Sources */,
-				46079E0C166E65D700FEBA87 /* COViewController.m in Sources */,
+				46079E03166E65D700FEBA87 /* MBAppDelegate.m in Sources */,
+				46079E0C166E65D700FEBA87 /* MBViewController.m in Sources */,
+				46079E2F166E660F00FEBA87 /* MBCalloutView.m in Sources */,
+				46079E32166E67F200FEBA87 /* UIButton+Callout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,12 +316,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		46079E0D166E65D700FEBA87 /* COViewController.xib */ = {
+		46079E0D166E65D700FEBA87 /* MBViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				46079E0E166E65D700FEBA87 /* en */,
 			);
-			name = COViewController.xib;
+			name = MBViewController.xib;
 			sourceTree = "<group>";
 		};
 		46079E1F166E65D700FEBA87 /* InfoPlist.strings */ = {
