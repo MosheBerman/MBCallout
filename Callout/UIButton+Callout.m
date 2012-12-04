@@ -14,15 +14,19 @@
 
 @implementation UIButton (Callout)
 
-- (void) showCalloutWithText:(NSString *)text{
+- (void) showCalloutWithTitle:(NSString *)title{
+    [self setCalloutTitle:title];
+    [self showCallout];
+}
 
-    
+- (void) showCallout{
     if (![self callout]) {
         MBCalloutView *callout = [[MBCalloutView alloc] initWithParentView:self];
         [self setCallout:callout];
     }
     
     [[self callout] show];
+
 }
 
 #pragma mark - Callout View
