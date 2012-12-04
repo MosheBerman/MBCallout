@@ -10,4 +10,6 @@
 
 @interface COCalloutView : UIView
 
+- (id)initWithParentView:(UIView *)parent;
+
 @end
