@@ -14,10 +14,19 @@
 
 @property (nonatomic, assign) UIView *parent;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) UILabel *titleLabel;
 
 @end
 
 @implementation MBCalloutView
+
+//
+//  These values closele approximate the maximum
+//  size of an MKAnnotationView's callout.
+//
+
+const double kCalloutHeight = 44;
+const double kCalloutWidth = 307.5;
 
 - (id)initWithParentView:(UIView *)parent{
     self = [self initWithParentView:parent andTitle:@""];
@@ -29,7 +38,8 @@
 //
 
 - (id)initWithParentView:(UIView *)parent andTitle:(NSString *)title{
-    self =  [self initWithFrame:CGRectMake(0, 0, 290, 50)];
+    
+    self =  [self initWithFrame:CGRectMake(0, 0, kCalloutWidth, kCalloutHeight)];
     
     if (self) {
         _parent = parent;
