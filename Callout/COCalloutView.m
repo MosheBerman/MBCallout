@@ -33,8 +33,8 @@
     
     if (self) {
         _parent = parent;
-        [self setCenter:[self adjustedCenter]];
         _title = title;
+        [self setCenter:[self adjustedCenter]];
         
         [[self layer] setBorderColor:[UIColor darkGrayColor].CGColor];
         [[self layer] setBorderWidth:1.0];
@@ -71,6 +71,7 @@
      Grow        1.0     1/7.5
      
      */
+
     
     [UIView animateWithDuration:0.2 animations:^{
         
@@ -111,7 +112,7 @@
 
 - (CGPoint) adjustedCenter{
     CGPoint center = [self parent].center;
-    center.y -= ([[self parent] frame].size.height + [_parent frame].size.height/2);
+    center.y -= ([[self parent] frame].size.height + [_parent frame].size.height);
     return center;
 }
 
