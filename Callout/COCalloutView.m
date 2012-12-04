@@ -23,9 +23,7 @@
     
     if (self) {
         _parent = parent;
-        CGPoint center = parent.center;
-        center.y -= ([_parent frame].size.height + [_parent frame].size.height/2);
-        [self setCenter:center];
+        [self setCenter:[self adjustedCenter]];
         
         [[self layer] setBorderColor:[UIColor darkGrayColor].CGColor];
         [[self layer] setBorderWidth:1.0];
@@ -49,8 +47,73 @@
 
 - (void) show{
     
+    //
+    //  Shrink to hide
+    //
+    
+    CGAffineTransform t = CGAffineTransformScale([self transform], 0.1, 0.1);
+    [self setTransform:t];
+    
+    //
+    //  Add to the parent view
+    //
+    
     [[[self parent] superview] addSubview:self];
     
+    
+    /*
+     
+     Action      Scale   Duration
+     
+     Grow        1.05    0.2
+     Shrink      0.9     1/15.0
+     Grow        1.0     1/7.5
+     
+     */
+    
+    
+    
+    [UIView animateWithDuration:0.2 animations:^{
+        
+        CGAffineTransform t = CGAffineTransformScale(CGAffineTransformIdentity, 1.05, 1.05);
+        [self setTransform:t];
+        
+        [self setAlpha:0.8];
+        
+    }
+                     completion:^(BOOL finished) {
+                         
+                         [UIView animateWithDuration:1/15.0 animations:^{
+                             
+                             CGAffineTransform t = CGAffineTransformScale([self transform], 0.9, 0.9);
+                             [self setTransform:t];
+                             
+                             [self setAlpha:0.8];
+                         }
+                                          completion:^(BOOL finished) {
+                                              [UIView animateWithDuration:1/7.5 animations:^{
+                                                  
+                                                  CGAffineTransform t = CGAffineTransformScale([self transform], 1, 1);
+                                                  [self setTransform:t];
+                                                  
+                                                  [self setAlpha:1.0];
+                                              }];
+                                              
+                                          }];
+                     }];
+    
+    
+    
+}
+
+//
+//  Helper method to keep the popping callout centered.
+//
+
+- (CGPoint) adjustedCenter{
+    CGPoint center = [self parent].center;
+    center.y -= ([[self parent] frame].size.height + [_parent frame].size.height/2);
+    return center;
 }
 
 
