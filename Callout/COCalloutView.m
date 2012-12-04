@@ -24,8 +24,13 @@
     if (self) {
         _parent = parent;
         CGPoint center = parent.center;
-        center.y -= [_parent frame].size.height/2;
+        center.y -= ([_parent frame].size.height + [_parent frame].size.height/2);
         [self setCenter:center];
+        
+        [[self layer] setBorderColor:[UIColor darkGrayColor].CGColor];
+        [[self layer] setBorderWidth:1.0];
+        [[self layer] setCornerRadius:5];
+        [self setBackgroundColor:[UIColor whiteColor]];
     }
     return self;
 }
@@ -38,19 +43,6 @@
         
     }
     return self;
-}
-
-
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-    
-    [[self layer] setBorderColor:[UIColor darkGrayColor].CGColor];
-    [[self layer] setBorderWidth:1.0];
-    [[self layer] setCornerRadius:5];
-    
 }
 
 #pragma mark - Show in view
