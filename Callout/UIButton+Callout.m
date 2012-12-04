@@ -15,12 +15,14 @@
 @implementation UIButton (Callout)
 
 - (void) showCalloutWithText:(NSString *)text{
-    
-    COCalloutView *callout = [[COCalloutView alloc] initWithParentView:self];
-    
-    [self setCallout:callout];
 
-    [callout show];
+    
+    if (![self callout]) {
+        COCalloutView *callout = [[COCalloutView alloc] initWithParentView:self];
+        [self setCallout:callout];
+    }
+    
+    [[self callout] show];
 }
 
 #pragma mark - Callout View
