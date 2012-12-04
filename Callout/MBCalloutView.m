@@ -48,19 +48,36 @@
 #pragma mark - Show in view
 
 - (void) show{
-    
-    //
-    //  Shrink to hide
-    //
-    
-    CGAffineTransform t = CGAffineTransformScale([self transform], 0.1, 0.1);
-    [self setTransform:t];
+
     
     //
     //  Add to the parent view
     //
     
     [[[self parent] superview] addSubview:self];
+    
+    //
+    //  Animate the view into place
+    //
+    
+    [self popAndFade];
+    
+}
+
+//
+//  This method animates
+//  a view to mimic the
+//  style of a UIAlertView
+//  as it animates into view.
+//
+
+- (void) popAndFade{
+    //
+    //  Shrink to hide
+    //
+    
+    CGAffineTransform t = CGAffineTransformScale([self transform], 0.1, 0.1);
+    [self setTransform:t];
     
     /*
      
@@ -71,7 +88,7 @@
      Grow        1.0     1/7.5
      
      */
-
+    
     
     [UIView animateWithDuration:0.2 animations:^{
         
@@ -102,8 +119,7 @@
                                           }];
                      }];
     
-    
-    
+
 }
 
 //
