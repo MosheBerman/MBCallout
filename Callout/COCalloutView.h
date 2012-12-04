@@ -12,4 +12,6 @@
 
 - (id)initWithParentView:(UIView *)parent;
 
+- (void) show;
+
 @end

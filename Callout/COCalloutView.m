@@ -53,5 +53,13 @@
     
 }
 
+#pragma mark - Show in view
+
+- (void) show{
+    
+    [[[self parent] superview] addSubview:self];
+    
+}
+
 
 @end
