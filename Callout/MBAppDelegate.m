@@ -8,7 +8,7 @@
 
 #import "MBAppDelegate.h"
 
-#import "COViewController.h"
+#import "MBViewController.h"
 
 @implementation MBAppDelegate
 
@@ -16,7 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[COViewController alloc] initWithNibName:@"COViewController" bundle:nil];
+    self.viewController = [[MBViewController alloc] initWithNibName:@"MBViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
