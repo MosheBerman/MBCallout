@@ -20,8 +20,9 @@
 }
 
 - (void) showCallout{
+    
     if (![self callout]) {
-        MBCalloutView *callout = [[MBCalloutView alloc] initWithParentView:self];
+        MBCalloutView *callout = [[MBCalloutView alloc] initWithParentView:self andTitle:[self calloutTitle]];
         [self setCallout:callout];
     }
     
