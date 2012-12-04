@@ -8,6 +8,10 @@
 
 #import "MBViewController.h"
 
+//
+//  This category is where the magic happens
+//
+
 #import "UIButton+Callout.h"
 
 @interface MBViewController ()
@@ -23,12 +27,35 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    //
+    //  Create a UIButton
+    //
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
     
+    //
+    //  Tell the button to show a callout on tap
+    //
+    
     [button addTarget:button action:@selector(showCalloutWithText:) forControlEvents:UIControlEventTouchUpInside];
+    
+    //
+    //  Position
+    //
+    
     [button setCenter:[[self view] center]];
-
+    
+    //
+    //  "Retain" a reference to the button
+    //  (not in the memory management sense,
+    //  just hang on to it.)
+    //
+    
     _button = button;
+    
+    //
+    //  Show the button
+    //
     
     [[self view] addSubview:[self button]];
     
