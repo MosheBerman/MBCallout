@@ -37,4 +37,16 @@ static char *kCalloutKey = "callout";
    return objc_getAssociatedObject(self, kCalloutKey);
 }
 
+#pragma mark - Callout Title
+
+static char *kCalloutTitleKey = "callout title";
+
+- (void) setCalloutTitle:(NSString *)title{
+    objc_setAssociatedObject(self, kCalloutTitleKey, title, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (NSString *)calloutTitle{
+    return objc_getAssociatedObject(self, kCalloutTitleKey);
+}
+
 @end
