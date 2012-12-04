@@ -78,8 +78,15 @@ const double kCalloutPadding = 5;
     return self;
 }
 
+#pragma mark - Title
 
-#pragma mark - Show in view
+- (void)setTitle:(NSString *)title{
+    
+    _title = title;
+    [_titleLabel setText:title];
+}
+
+#pragma mark - Show Methods
 
 - (void) show{
 
