@@ -34,10 +34,16 @@
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
     
     //
+    //  Set the callout title.
+    //
+    
+    [button setCalloutTitle:@"This is a callout with some text in it."];
+    
+    //
     //  Tell the button to show a callout on tap
     //
     
-    [button addTarget:button action:@selector(showCalloutWithText:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:button action:@selector(showCallout) forControlEvents:UIControlEventTouchUpInside];
     
     //
     //  Position
