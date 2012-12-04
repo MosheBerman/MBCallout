@@ -8,7 +8,11 @@
 
 #import "COViewController.h"
 
+#import "UIButton+Callout.h"
+
 @interface COViewController ()
+
+@property (nonatomic, strong) UIButton *button;
 
 @end
 
@@ -18,6 +22,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    
+    [button addTarget:button action:@selector(showCalloutWithText:) forControlEvents:UIControlEventTouchUpInside];
+    [button setCenter:[[self view] center]];
+
+    _button = button;
+    
+    [[self view] addSubview:[self button]];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +39,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end
