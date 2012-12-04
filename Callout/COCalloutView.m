@@ -13,17 +13,28 @@
 @interface COCalloutView ()
 
 @property (nonatomic, assign) UIView *parent;
+@property (nonatomic, strong) NSString *title;
 
 @end
 
 @implementation COCalloutView
 
 - (id)initWithParentView:(UIView *)parent{
-    self =  [self initWithFrame:CGRectMake(0, 0, 200, 50)];
+    self = [self initWithParentView:parent andTitle:@""];
+    return self;
+}
+
+//
+//  Designated initializer
+//
+
+- (id)initWithParentView:(UIView *)parent andTitle:(NSString *)title{
+    self =  [self initWithFrame:CGRectMake(0, 0, 290, 50)];
     
     if (self) {
         _parent = parent;
         [self setCenter:[self adjustedCenter]];
+        _title = title;
         
         [[self layer] setBorderColor:[UIColor darkGrayColor].CGColor];
         [[self layer] setBorderWidth:1.0];
@@ -33,15 +44,6 @@
     return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        
-    }
-    return self;
-}
 
 #pragma mark - Show in view
 
@@ -60,7 +62,6 @@
     
     [[[self parent] superview] addSubview:self];
     
-    
     /*
      
      Action      Scale   Duration
@@ -70,8 +71,6 @@
      Grow        1.0     1/7.5
      
      */
-    
-    
     
     [UIView animateWithDuration:0.2 animations:^{
         

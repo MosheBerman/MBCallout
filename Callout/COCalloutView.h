@@ -10,8 +10,13 @@
 
 @interface COCalloutView : UIView
 
+//
+//  Designated initializer
+//
+
+- (id)initWithParentView:(UIView *)parent andTitle:(NSString *)title;
 - (id)initWithParentView:(UIView *)parent;
 
-- (void) show;
+- (void)show;
 
 @end
