@@ -10,4 +10,6 @@
 
 @interface UIButton (Callout)
 
+- (void) showCalloutWithText:(NSString *)text;
+
 @end
