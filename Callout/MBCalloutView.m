@@ -27,6 +27,7 @@
 
 const double kCalloutHeight = 44;
 const double kCalloutWidth = 307.5;
+const double kCalloutPadding = 5;
 
 - (id)initWithParentView:(UIView *)parent{
     self = [self initWithParentView:parent andTitle:@""];
@@ -49,6 +50,15 @@ const double kCalloutWidth = 307.5;
         
         _parent = parent;
         _title = title;
+        
+        //
+        //  Add a label
+        //
+        
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(kCalloutPadding*1.5, kCalloutPadding, kCalloutWidth-kCalloutPadding*3, kCalloutHeight-kCalloutPadding*2)];
+        [_titleLabel setText:_title];
+        
+        [self addSubview:_titleLabel];
         
         //
         //  Center the callout appropriately
