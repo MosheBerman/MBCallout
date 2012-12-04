@@ -42,9 +42,23 @@ const double kCalloutWidth = 307.5;
     self =  [self initWithFrame:CGRectMake(0, 0, kCalloutWidth, kCalloutHeight)];
     
     if (self) {
+        
+        //
+        //  Hang on to the initializer's parameters
+        //
+        
         _parent = parent;
         _title = title;
+        
+        //
+        //  Center the callout appropriately
+        //
+        
         [self setCenter:[self adjustedCenter]];
+        
+        //
+        //  Configure the look and feel
+        //
         
         [[self layer] setBorderColor:[UIColor darkGrayColor].CGColor];
         [[self layer] setBorderWidth:1.0];
