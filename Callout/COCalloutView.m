@@ -85,7 +85,7 @@
                          
                          [UIView animateWithDuration:1/15.0 animations:^{
                              
-                             CGAffineTransform t = CGAffineTransformScale([self transform], 0.9, 0.9);
+                             CGAffineTransform t = CGAffineTransformScale(CGAffineTransformIdentity, 0.9, 0.9);
                              [self setTransform:t];
                              
                              [self setAlpha:0.8];
@@ -93,7 +93,7 @@
                                           completion:^(BOOL finished) {
                                               [UIView animateWithDuration:1/7.5 animations:^{
                                                   
-                                                  CGAffineTransform t = CGAffineTransformScale([self transform], 1, 1);
+                                                  CGAffineTransform t = CGAffineTransformIdentity;
                                                   [self setTransform:t];
                                                   
                                                   [self setAlpha:1.0];
